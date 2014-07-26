@@ -1,9 +1,8 @@
 class Tourney < ActiveRecord::Base
-  belongs_to :tourneytypes
-  belongs_to :tourneycomments
-  belongs_to :schedules
-  belongs_to :venues
-  belongs_to :users
-  belongs_to :gametypes
-  belongs_to :rsvp_stats
+  belongs_to :tourney_type
+  belongs_to :tourney_comment
+  belongs_to :tourney_comments
+  belongs_to :user
+  belongs_to :venue
+  belongs_to :game_type
 end

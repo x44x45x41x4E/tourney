@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140726153909) do
+ActiveRecord::Schema.define(version: 20140726162542) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -103,27 +103,25 @@ ActiveRecord::Schema.define(version: 20140726153909) do
 
   create_table "tourneys", force: true do |t|
     t.string   "title"
-    t.text     "tourney_desc"
-    t.integer  "tourneytypes_id"
-    t.integer  "tourneycomments_id"
-    t.integer  "schedules_id"
-    t.integer  "venues_id"
-    t.integer  "users_id"
-    t.integer  "gametypes_id"
-    t.integer  "rsvp_stats_id"
+    t.text     "desc"
+    t.integer  "tourney_type_id"
+    t.integer  "tourney_comment_id"
+    t.integer  "tourney_comments_id"
+    t.datetime "start_date"
+    t.datetime "end_date"
+    t.integer  "user_id"
+    t.integer  "venue_id"
+    t.integer  "game_type_id"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.integer  "game_type_id"
   end
 
   add_index "tourneys", ["game_type_id"], name: "index_tourneys_on_game_type_id", using: :btree
-  add_index "tourneys", ["gametypes_id"], name: "index_tourneys_on_gametypes_id", using: :btree
-  add_index "tourneys", ["rsvp_stats_id"], name: "index_tourneys_on_rsvp_stats_id", using: :btree
-  add_index "tourneys", ["schedules_id"], name: "index_tourneys_on_schedules_id", using: :btree
-  add_index "tourneys", ["tourneycomments_id"], name: "index_tourneys_on_tourneycomments_id", using: :btree
-  add_index "tourneys", ["tourneytypes_id"], name: "index_tourneys_on_tourneytypes_id", using: :btree
-  add_index "tourneys", ["users_id"], name: "index_tourneys_on_users_id", using: :btree
-  add_index "tourneys", ["venues_id"], name: "index_tourneys_on_venues_id", using: :btree
+  add_index "tourneys", ["tourney_comment_id"], name: "index_tourneys_on_tourney_comment_id", using: :btree
+  add_index "tourneys", ["tourney_comments_id"], name: "index_tourneys_on_tourney_comments_id", using: :btree
+  add_index "tourneys", ["tourney_type_id"], name: "index_tourneys_on_tourney_type_id", using: :btree
+  add_index "tourneys", ["user_id"], name: "index_tourneys_on_user_id", using: :btree
+  add_index "tourneys", ["venue_id"], name: "index_tourneys_on_venue_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false

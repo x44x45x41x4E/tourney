@@ -16,7 +16,7 @@ BaseApp::Application.routes.draw do
 
   end
 
-
+  resources :tourneys
 
   match 'users/dashboard', :to => 'user#index', :via => [:get], :as => :my_dashboard
   match 'users/:id', :to => 'user#members_dashboard', :via => [:get], :as => :users_dashboard
