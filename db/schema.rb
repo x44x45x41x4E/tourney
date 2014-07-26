@@ -61,11 +61,15 @@ ActiveRecord::Schema.define(version: 20140726132422) do
   end
 
   create_table "rsvp_stats", force: true do |t|
+
     t.string   "rsvp_stat"
+    t.integer  "tourney_id"
+    t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
 
   add_index "rsvp_stats", ["user_id"], name: "index_rsvp_stats_on_user_id", using: :btree
 
