@@ -7,11 +7,15 @@
 	<div class="col-sm-offset-2 col-sm-4" align="center">
 		<span>
 			<strong>
-				<%= newest_tourney_tournaments.title %>
+				<%= link_to newest_tourney_tournaments.title, tourney_path(newest_tourney_tournaments.id) %>
 			</strong>
 		</span>
 	</div>
 	<div class="col-sm-12" align="right">
+		<small>
+			Posted By: <a href="<%= users_dashboard_path(newest_tourney_tournaments.user.id) %>"><%= newest_tourney_tournaments.user.first_name%> <%= newest_tourney_tournaments.user.last_name%></a>
+		</small>
+		<br />
 		<small>
 			Los Angeles City
 		</small>
