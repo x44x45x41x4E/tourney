@@ -24,7 +24,6 @@ gem "dynamic_form"
 
 group :test, :development do
   gem "rspec-rails"
-  gem "debugger"
   gem "awesome_print", :require => 'ap'
   gem "annotate"
   gem "bullet"
