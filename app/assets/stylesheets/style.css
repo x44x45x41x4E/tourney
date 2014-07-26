@@ -12,3 +12,7 @@ div.hottest-tourney{
 .f-right{
 	float: right;
 }
+
+a#logo-btn{
+	padding: 10px;
+}
