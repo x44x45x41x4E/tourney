@@ -12,3 +12,20 @@ div.wrapper{
 	width: 1000px;
 	margin: 0 auto;
 }
+
+.no-padding{
+	padding: 0px !important;
+}
+
+#hottest-tourney{
+	background-color: #000;
+	color: #fff;
+}
+#hottest-tourney h1{
+	text-align: center;
+}
+
+.tourn-list{
+	background: #F0F0F0;
+	color: gray;
+}

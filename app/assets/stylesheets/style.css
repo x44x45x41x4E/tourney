@@ -3,13 +3,6 @@ body {
   margin: 0px;
   padding: 0px;
 }
-
-.tourney-list {
-  font-size: 24px;
-  width: 90%;
-  background: #000;
-  height: 65px;
-  border-radius: 5px 5px 5px 5px;
-  color: 000;
-  margin-bottom: 17px;
+div.hottest-tourney{
+	background-color: ;
 }
