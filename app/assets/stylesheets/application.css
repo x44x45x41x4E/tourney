@@ -26,6 +26,7 @@ div.wrapper{
 #hottest-tourney{
 	background-color: #BE1622;
 	color: #fff;
+  height: 500px;
 }
 #hottest-tourney h1{
 	text-align: center;
@@ -34,4 +35,14 @@ div.wrapper{
 .tourn-list{
 	background: #F0F0F0;
 	color: gray;
+}
+
+.tourn-list .row{
+  margin: 3px;
+  height: 100px;
+}
+
+.image {
+  height: 50px;
+  background: none no-repeat scroll center center / contain transparent;
 }
