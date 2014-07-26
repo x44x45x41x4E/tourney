@@ -11,10 +11,19 @@
     </div>
   <% end %>
 
-  <div class="field">
-    <%= f.label :title %><br>
-    <%= f.text_field :title %>
+  <div class="form-group">
+    <%= f.label :title, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+      <%= f.text_field :title, :class => "form-control", :placeholder => "Amaze them with your Tourney Subject!" %>
+    </div>
   </div>
+  <div class="form-group">
+    <%= f.label :desc, :class => "col-sm-2 control-label" %>
+    <div class="col-sm-4">
+      <%= f.text_area :desc, :class => "form-control", :placeholder => "Amaze them even more!" %>
+    </div>
+  </div>
+
   <div class="field">
     <%= f.label :desc %><br>
     <%= f.text_area :desc %>

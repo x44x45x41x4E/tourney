@@ -1,6 +1,32 @@
-<div class="wrapper">
-      <div class="container">
-        <h1>Listing tourneys</h1>
+<section id="hottest-tourney" class="no-padding">
+  <div class="wrapper">
+    <div class="container">
+      <% @tourneys.each do |tourney| %>
+        <%if tourney.tourney_type_id == 2%>
+          <div class="row tourney-list-casuals">
+        <%else%>
+          <div class="row tourney-list-tournaments">
+        <%end%>
+          <div class="row">
+            <div class="col-md-3">
+                by: <a href="<%= users_dashboard_path(tourney.user.id)%>"><%= tourney.user.first_name %> <%= tourney.user.last_name %></a><br/>
+                <%= time_ago_in_words(tourney.start_date).gsub('about','') + ' ago' %>
+            </div>
+            <div class="col-md-6">
+              <h4><b><%= link_to tourney.title, tourney_path(tourney.id) %></b></h4>
+            </div>
+            <div class="col-md-3" align='left'>
+              <%= tourney.tourney_type.tourney_name%><br>
+              Location Here
+            </div>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+</section>
+
+ <h1>Listing tourneys</h1>
       <table>
         <thead>
           <tr>
@@ -38,5 +64,3 @@
       </table>
       <br>
         <%= link_to 'New Tourney', new_tourney_path %>
-      </div>
-  </div>
