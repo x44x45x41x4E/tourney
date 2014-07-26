@@ -1,13 +1,13 @@
 
 body {
   margin: 0px;
+  padding: 0px;
 }
 
 .tourney-list {
   font-size: 24px;
   width: 90%;
   background: #000;
-  padding: 0px 15px;
   height: 65px;
   border-radius: 5px 5px 5px 5px;
   color: 000;
