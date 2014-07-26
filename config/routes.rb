@@ -14,4 +14,6 @@ BaseApp::Application.routes.draw do
 
   root :to => "pages#index"
 
+  match 'user/dashboard', :to => 'user#index', :via => [:get], :as => :my_dashboard
+
 end
