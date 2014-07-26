@@ -48,3 +48,16 @@ User.create([
 			:updated_at => '2014-07-26 16:46:13'
 			}
 	])
+
+TourneyType.create([
+		{ :tourney_name => 'Tournament' }, 
+		{ :tourney_name => 'Casual'}
+	])
+
+GameMode.create([
+		{ :name => 'Round Robin' }, 
+		{ :name => 'Scorer'}, 
+		{ :name => 'Video Game'},
+		{ :name => 'Scorer'},
+		{ :name => 'Others'}
+	])
