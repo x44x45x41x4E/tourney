@@ -54,6 +54,6 @@ class TourneysController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tourney_params
-      params.require(:tourney).permit(:title, :desc, :tourney_type_id, :tourney_comments_id, :start_date, :end_date, :user_id, :venue_id, :game_type_id)
+      params.require(:tourney).permit(:title, :desc, :tourney_type_id, :start_date, :end_date, :user_id, :venue_id, :game_type_id)
     end
 end

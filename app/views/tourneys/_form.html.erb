@@ -24,10 +24,6 @@
     <%= f.text_field :tourney_type_id %>
   </div>
   <div class="field">
-    <%= f.label :tourney_comments_id %><br>
-    <%= f.text_field :tourney_comments_id %>
-  </div>
-  <div class="field">
     <%= f.label :start_date %><br>
     <%= f.datetime_select :start_date %>
   </div>
@@ -41,7 +37,7 @@
   </div>
   <div class="field">
     <%= f.label :game_type_id %><br>
-    <%= f.text_field :game_type_id %>
+    <%= f.collection_select :game_type_id, GameType.all, :id, :name, {:include_blank => false} %>
   </div>
   <div class="actions">
     <%= f.submit %>
