@@ -6,8 +6,6 @@ class User < ActiveRecord::Base
 
   devise :omniauthable
 
-  has_many :games
-
   has_and_belongs_to_many :roles
 
   def role?(role)
