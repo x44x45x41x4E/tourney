@@ -19,3 +19,6 @@ a#logo-btn{
 [role="navigation"]{
 	margin-bottom: 0px !important;
 }
+.open > .dropdown-menu{
+	margin-top: 0px !important;
+}

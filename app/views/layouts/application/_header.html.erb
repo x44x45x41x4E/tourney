@@ -33,7 +33,7 @@
           <a href="#" class="dropdown-toggle" type="link" data-toggle="dropdown"><%= current_user.first_name %> 
             <span class="caret"></span>
           </a>
-          <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
+          <ul id="acct_dropdown" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
             <% if user_signed_in? %>
               <li role="presentation"><%= link_to "Account Settings", edit_user_registration_path, role: 'menuitem', tabindex: '-1'%>
               </li>
