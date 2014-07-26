@@ -52,3 +52,4 @@ group :production, :development do
 end
 
 gem 'puma'
+gem 'yaml_db'

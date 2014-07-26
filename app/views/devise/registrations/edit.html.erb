@@ -26,6 +26,11 @@
     </div>
   </div>
 
+  <% Games.all.each do |games| %>
+    <%= hidden_field_tag "user[game_ids][]" %>
+    <%= check_box_tag "user[game_ids][]", games.id, @user.games.include?(games), :id => "user_game_ids#{games.id}" %>
+  <% end %>
+
   <div class="form-group">
     <div class="col-sm-offset-2 col-sm-4">
       <button type="submit" class="btn btn-default">Save settings</button>
