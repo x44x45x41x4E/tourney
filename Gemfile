@@ -21,6 +21,7 @@ gem "omniauth-facebook"
 gem "kaminari"
 gem "ransack"
 gem "dynamic_form"
+gem "geocoder"
 
 group :test, :development do
   gem "rspec-rails"
