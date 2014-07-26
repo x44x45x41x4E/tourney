@@ -32,8 +32,9 @@ div.wrapper{
 }
 
 .tourn-list{
-	background: #dfdfdf;
+	background: #F5F7FA;
 	color: gray;
+  border-radius: 10px;
 }
 .tourn-list > div.col-sm-3{
 	height: 100%;
@@ -43,6 +44,10 @@ div.wrapper{
 .tourn-list .row{
   margin: 3px;
   height: 100px;
+}
+
+.tourn-list.row:hover {
+  color: #F6BB42;
 }
 
 .image {
