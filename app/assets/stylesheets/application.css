@@ -7,3 +7,8 @@
 */
 
 .top48 { margin-top: 48px; }
+
+div.wrapper{
+	width: 1000px;
+	margin: 0 auto;
+}
