@@ -34,30 +34,29 @@
 #		{ :name => 'Boxing', :game_type_id => '3'}
 #	])
 
-User.create([
-		{ 	:first_name => 'Bogart', 
-			:last_name => 'Dope',
-			:email => 'sample@sample.com', 
-			:encrypted_password => '$2a$10$3e7SkGNW.dp0I./Lalz2NusFwhntY71w1/59Bg7RH3c4ipR1L.zLe',
-			:sign_in_count => '1', 
-			:current_sign_in_at => '2014-07-26 16:46:13', 
-			:last_sign_in_at => '2014-07-26 16:46:13', 
-			:current_sign_in_ip => '127.0.0.1',
-			:last_sign_in_ip => '127.0.0.1', 
-			:created_at => '2014-07-26 16:46:13', 
-			:updated_at => '2014-07-26 16:46:13'
-			}
-	])
+#User.create([
+#		{ 	:first_name => 'Bogart', 
+#			:last_name => 'Dope',
+#			:email => 'sample@sample.com', 
+#			:encrypted_password => '$2a$10$3e7SkGNW.dp0I./Lalz2NusFwhntY71w1/59Bg7RH3c4ipR1L.zLe',
+#			:sign_in_count => '1', 
+#			:current_sign_in_at => '2014-07-26 16:46:13', 
+#			:last_sign_in_at => '2014-07-26 16:46:13', 
+#			:current_sign_in_ip => '127.0.0.1',
+#			:last_sign_in_ip => '127.0.0.1', 
+#			:created_at => '2014-07-26 16:46:13', 
+#			:updated_at => '2014-07-26 16:46:13'
+#			}
+#	])
 
-TourneyType.create([
-		{ :tourney_name => 'Tournament' }, 
-		{ :tourney_name => 'Casual'}
-	])
+#TourneyType.create([
+#		{ :tourney_name => 'Tournament' }, 
+#		{ :tourney_name => 'Casual'}
+#	])
 
 GameMode.create([
 		{ :name => 'Round Robin' }, 
 		{ :name => 'Scorer'}, 
-		{ :name => 'Video Game'},
 		{ :name => 'Scorer'},
 		{ :name => 'Others'}
 	])
