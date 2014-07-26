@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Message type:</strong>
+  <%= @messager.message_type %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @messager.user %>
+</p>
+
+<p>
+  <strong>Shortcode:</strong>
+  <%= @messager.shortcode %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @messager.message_id %>
+</p>
+
+<p>
+  <strong>Message:</strong>
+  <%= @messager.message %>
+</p>
+
+<p>
+  <strong>Client:</strong>
+  <%= @messager.client_id %>
+</p>
+
+<p>
+  <strong>Secret key:</strong>
+  <%= @messager.secret_key %>
+</p>
+
+<%= link_to 'Edit', edit_messager_path(@messager) %> |
+<%= link_to 'Back', messagers_path %>
