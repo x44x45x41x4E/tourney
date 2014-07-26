@@ -48,4 +48,5 @@ end
 
 group :production, :development do
   gem "thin"
+  gem 'yaml_db'
 end
