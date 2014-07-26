@@ -16,3 +16,6 @@ div.hottest-tourney{
 a#logo-btn{
 	padding: 10px;
 }
+[role="navigation"]{
+	margin-bottom: 0px !important;
+}
