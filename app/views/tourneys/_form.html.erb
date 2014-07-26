@@ -1,4 +1,4 @@
-<%= form_for(@tourney) do |f| %>
+<%= form_for(@tourney, :html => { :method => :put, :class => "form-horizontal", :role => "form" }) do |f| %>
   <% if @tourney.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@tourney.errors.count, "error") %> prohibited this tourney from being saved:</h2>
@@ -12,44 +12,59 @@
   <% end %>
 
   <div class="form-group">
-    <%= f.label :title, :class => "col-sm-2 control-label" %>
+    <%= f.label :title, :class => "col-sm-3 control-label" %>
     <div class="col-sm-4">
       <%= f.text_field :title, :class => "form-control", :placeholder => "Amaze them with your Tourney Subject!" %>
     </div>
   </div>
+
   <div class="form-group">
-    <%= f.label :desc, :class => "col-sm-2 control-label" %>
+    <%= f.label :desc, :class => "col-sm-3 control-label" %>
     <div class="col-sm-4">
       <%= f.text_area :desc, :class => "form-control", :placeholder => "Amaze them even more!" %>
     </div>
   </div>
 
-  <div class="field">
-    <%= f.label :desc %><br>
-    <%= f.text_area :desc %>
+  <div class="form-group">
+    <%= f.label :tourney_type_id, :class => "col-sm-3 control-label" %>
+    <div class="col-sm-4">
+      <%= f.collection_select :game_type_id, TourneyType.all, :id, :tourney_name, {:include_blank => false} %>
+    <%= f.hidden_field :user_id,:value=> current_user.id %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :tourney_type_id %><br>
-    <%= f.text_field :tourney_type_id %>
-        <%= f.hidden_field :user_id,:value=> current_user.id %>
+
+  <div class="form-group">
+    <%= f.label :start_date, :class => "col-sm-3 control-label" %>
+    <div class="col-sm-4">
+      <%= f.datetime_select :start_date, :class => "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :start_date %><br>
-    <%= f.datetime_select :start_date %>
+
+  <div class="form-group">
+    <%= f.label :end_date, :class => "col-sm-3 control-label" %>
+    <div class="col-sm-4">
+      <%= f.datetime_select :end_date, :class => "form-control" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :end_date %><br>
-    <%= f.datetime_select :end_date %>
+
+  <div class="form-group">
+    <%= f.label :venue_id, :class => "col-sm-3 control-label" %>
+    <div class="col-sm-4">
+      <%= f.text_area :venue_id, :class => "form-control", :placeholder => "" %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :venue_id %><br>
-    <%= f.text_field :venue_id %>
+
+
+  <div class="form-group">
+    <%= f.label :game_type_id, :class => "col-sm-3 control-label" %>
+    <div class="col-md-4">
+      <%= f.collection_select :game_type_id, GameType.all, :id, :name, {:include_blank => false} %>
+    </div>
   </div>
-  <div class="field">
-    <%= f.label :game_type_id %><br>
-    <%= f.collection_select :game_type_id, GameType.all, :id, :name, {:include_blank => false} %>
-  </div>
-  <div class="actions">
-    <%= f.submit %>
+
+  <div class="form-group">
+    <div class="col-sm-offset-2 col-sm-4">
+      <%= f.submit "Submit" ,:class => "btn btn-default" %>
+    </div>
   </div>
 <% end %>
