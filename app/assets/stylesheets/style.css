@@ -22,3 +22,7 @@ a#logo-btn{
 .open > .dropdown-menu{
 	margin-top: 0px !important;
 }
+div.row.comment{
+	background-color: #eee;
+	margin: 10px 0px;
+}

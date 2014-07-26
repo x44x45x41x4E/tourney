@@ -59,3 +59,8 @@ div.tourn-list{
 	color: #fff;
 }
 
+div#comment_box{
+	border: 2px solid #BE1622;
+	width: 100px;
+	margin: 20px 0px;
+}

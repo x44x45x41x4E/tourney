@@ -4,7 +4,14 @@
 
     <div class="row">
       <div class="col-sm-2">
-        <%= image_tag('SMMGrandFinalLogo.png' , :width => "150px") %>
+        <div>
+          <%= image_tag('SMMGrandFinalLogo.png' , :width => "150px") %>
+        </div>
+
+        <div>
+          <%= link_to 'Edit', edit_tourney_path(@tourney) %> |
+          <%= link_to 'Back', tourneys_path %>
+        </div>
       </div>
       <div class="col-sm-10">
         <p id="notice"><%= notice %></p>
@@ -48,9 +55,56 @@
           <%= @tourney.game_type.name %>
         </p>
 
-        <%= link_to 'Edit', edit_tourney_path(@tourney) %> |
-        <%= link_to 'Back', tourneys_path %>
       </div>
     </div>
   </div>
 </section>
+
+
+<div class="wrapper">
+
+  <div id="comment_box">
+  </div>
+    <div id="comment_reply_box"> 
+
+      <div class="row comment">
+        <div class="col-sm-2" style="margin-top: 0px;">
+          <%= image_tag('sample.png' ,:width=> '100px') %>
+        </div>
+
+        <div class="col-sm-10">
+          <h2>Meng David</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in justo et purus dignissim adipiscing ac vel erat. Aenean consectetur massa nunc, ac eleifend libero vehicula consectetur. Praesent at commodo quam. Curabitur vulputate pretium mauris, vitae sagittis neque varius vitae.
+          </p>
+        </div>
+      </div>
+    </div>
+
+      <div class="row comment">
+        <div class="col-sm-2" style="margin-top: 0px;">
+          <%= image_tag('sample.png' ,:width=> '100px') %>
+        </div>
+        
+        <div class="col-sm-10">
+          <h2>Meng David</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in justo et purus dignissim adipiscing ac vel erat. Aenean consectetur massa nunc, ac eleifend libero vehicula consectetur. Praesent at commodo quam. Curabitur vulputate pretium mauris, vitae sagittis neque varius vitae.
+          </p>
+        </div>
+      </div>
+
+      <div class="row comment">
+        <div class="col-sm-2" style="margin-top: 0px;">
+          <%= image_tag('sample.png' ,:width=> '100px') %>
+        </div>
+        
+        <div class="col-sm-10">
+          <h2>Meng David</h2>
+          <p>
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nam in justo et purus dignissim adipiscing ac vel erat. Aenean consectetur massa nunc, ac eleifend libero vehicula consectetur. Praesent at commodo quam. Curabitur vulputate pretium mauris, vitae sagittis neque varius vitae.
+          </p>
+        </div>
+      </div>
+
+</div>
