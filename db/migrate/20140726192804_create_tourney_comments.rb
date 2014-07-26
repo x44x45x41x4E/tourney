@@ -3,6 +3,7 @@ class CreateTourneyComments < ActiveRecord::Migration
     create_table :tourney_comments do |t|
       t.text :message
       t.references :user, index: true
+      t.references :tourney, index: true
 
       t.timestamps
     end

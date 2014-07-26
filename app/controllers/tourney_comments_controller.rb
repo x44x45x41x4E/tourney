@@ -53,7 +53,6 @@ class TourneyCommentsController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tourney_comment_params
-      #params[:tourney_comment]
-      params.require(:tourney_comment).permit(:message, :user_id, :tourney_id)
+      params.require(:tourney_comment).permit(:tourney_id, :message, :user_id)
     end
 end

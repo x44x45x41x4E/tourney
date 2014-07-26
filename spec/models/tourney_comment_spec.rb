@@ -1,5 +1,5 @@
 require 'rails_helper'
 
-RSpec.describe TourneyComments, :type => :model do
+RSpec.describe TourneyComment, :type => :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end

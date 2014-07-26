@@ -3,13 +3,20 @@
 <table>
   <thead>
     <tr>
+      <th>Tourney</th>
+      <th>Message</th>
+      <th>User</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
+  <%= debug @tourney_comment %>
     <% @tourney_comments.each do |tourney_comment| %>
       <tr>
+        <td><%= tourney_comment.tourney.title %></td>
+        <td><%= tourney_comment.message %></td>
+        <td><%= tourney_comment.user.email %></td>
         <td><%= link_to 'Show', tourney_comment %></td>
         <td><%= link_to 'Edit', edit_tourney_comment_path(tourney_comment) %></td>
         <td><%= link_to 'Destroy', tourney_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
