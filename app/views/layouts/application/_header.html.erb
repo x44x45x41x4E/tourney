@@ -29,19 +29,20 @@
 
       <ul class="nav navbar-nav navbar-right">
         <li><a href="#">Link</a></li>
-        <li class="dropdown">
+            <% if user_signed_in? %>
+                    <li class="dropdown">
           <a href="#" class="dropdown-toggle" type="link" data-toggle="dropdown"><%= current_user.first_name %> 
             <span class="caret"></span>
           </a>
           <ul id="acct_dropdown" class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu1">
-            <% if user_signed_in? %>
               <li role="presentation"><%= link_to "Account Settings", edit_user_registration_path, role: 'menuitem', tabindex: '-1'%>
               </li>
               <% if current_user.admin? %>
               <li role="presentation"><%= link_to "Admin", admin_path, role: 'menuitem', tabindex: '-1' %></li>
-           <% end %>
+              <% end %>
               <li role="presentation"><%= link_to "Sign out", destroy_user_session_path, role: 'menuitem', tabindex: '-1' %>
               </li>
+            </ul>
             <% else %>
               <li role="presentation"><%= link_to "Sign up", new_user_registration_path, role: 'menuitem', tabindex: '-1' %></a>
               </li>
