@@ -1,49 +1,56 @@
-<div class="wrapper">
-  <p id="notice"><%= notice %></p>
+<section class="highlight-view">
+  
+  <div class="wrapper">
 
-  <p>
-    <strong>Title:</strong>
-    <%= @tourney.title %>
-  </p>
+    <div class="row">
+      <div class="col-sm-2">
+        <%= image_tag('SMMGrandFinalLogo.png' , :width => "150px") %>
+      </div>
+      <div class="col-sm-10">
+        <p id="notice"><%= notice %></p>
+          <h1>
+            <%= @tourney.title %>
+          </h1>
 
-  <p>
-    <strong>Desc:</strong>
-    <%= @tourney.desc %>
-  </p>
+        
+        <%= @tourney.desc %>
+        
 
-  <p>
-    <strong>Tourney type:</strong>
-    <%= @tourney.tourney_type.tourney_name %>
-  </p>
+        <p>
+          <strong>Tourney type:</strong>
+          <%= @tourney.tourney_type.tourney_name %>
+        </p>
 
-  <p>
+        <p>
 
-    <strong>Start date:</strong>
-    <%= @tourney.start_date.strftime("%B %d, %Y") %>
+          <strong>Start date:</strong>
+          <%= @tourney.start_date.strftime("%B %d, %Y") %>
 
-  </p>
+        </p>
 
-  <p>
-    <strong>End date:</strong>
-    <%= @tourney.end_date.strftime("%B %d, %Y") %>
-  </p>
+        <p>
+          <strong>End date:</strong>
+          <%= @tourney.end_date.strftime("%B %d, %Y") %>
+        </p>
 
-  <p>
-    <strong>User:</strong>
-    <%= @tourney.user.first_name %> <%= @tourney.user.last_name %>
-  </p>
+        <p>
+          <strong>User:</strong>
+          <%= @tourney.user.first_name %> <%= @tourney.user.last_name %>
+        </p>
 
-  <p>
-    <strong>Venue:</strong>
-    <%# @tourney.venue %>
-  </p>
+        <p>
+          <strong>Venue:</strong>
+          <%# @tourney.venue %>
+        </p>
 
-  <p>
-    <strong>Game type:</strong>
-    <%= @tourney.game_type.name %>
-  </p>
+        <p>
+          <strong>Game type:</strong>
+          <%= @tourney.game_type.name %>
+        </p>
 
-  <%= link_to 'Edit', edit_tourney_path(@tourney) %> |
-  <%= link_to 'Back', tourneys_path %>
-
-</div>
+        <%= link_to 'Edit', edit_tourney_path(@tourney) %> |
+        <%= link_to 'Back', tourneys_path %>
+      </div>
+    </div>
+  </div>
+</section>
