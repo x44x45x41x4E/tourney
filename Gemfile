@@ -11,7 +11,7 @@ gem "uglifier", ">= 1.3.0"
 # Use CoffeeScript for .js.coffee assets and views
 gem "coffee-rails", "~> 4.0.0"
 
-# Use jQuery as the JavaScript library
+# Use jQuery as the JavaScript libraryq
 gem "jquery-rails"
 
 # User authentication
@@ -49,5 +49,6 @@ end
 group :production, :development do
   gem "thin"
   gem 'yaml_db'
-  gem 'puma'
 end
+
+gem 'puma'
