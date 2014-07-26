@@ -4,6 +4,7 @@ class TourneysController < ApplicationController
   # GET /tourneys
   def index
     @tourneys = Tourney.all
+    @tourney_comment = TourneyComment.new
   end
 
   # GET /tourneys/1

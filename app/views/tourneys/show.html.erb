@@ -1,44 +1,49 @@
-<p id="notice"><%= notice %></p>
+<div class="wrapper">
+  <p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Title:</strong>
-  <%= @tourney.title %>
-</p>
+  <p>
+    <strong>Title:</strong>
+    <%= @tourney.title %>
+  </p>
 
-<p>
-  <strong>Desc:</strong>
-  <%= @tourney.desc %>
-</p>
+  <p>
+    <strong>Desc:</strong>
+    <%= @tourney.desc %>
+  </p>
 
-<p>
-  <strong>Tourney type:</strong>
-  <%= @tourney.tourney_type %>
-</p>
+  <p>
+    <strong>Tourney type:</strong>
+    <%= @tourney.tourney_type.tourney_name %>
+  </p>
 
-<p>
-  <strong>Start date:</strong>
-  <%= @tourney.start_date %>
-</p>
+  <p>
 
-<p>
-  <strong>End date:</strong>
-  <%= @tourney.end_date %>
-</p>
+    <strong>Start date:</strong>
+    <%= @tourney.start_date.strftime("%B %d, %Y") %>
 
-<p>
-  <strong>User:</strong>
-  <%# @tourney.user %>
-</p>
+  </p>
 
-<p>
-  <strong>Venue:</strong>
-  <%# @tourney.venue %>
-</p>
+  <p>
+    <strong>End date:</strong>
+    <%= @tourney.end_date.strftime("%B %d, %Y") %>
+  </p>
 
-<p>
-  <strong>Game type:</strong>
-  <%= @tourney.game_type %>
-</p>
+  <p>
+    <strong>User:</strong>
+    <%= @tourney.user.first_name %> <%= @tourney.user.last_name %>
+  </p>
 
-<%= link_to 'Edit', edit_tourney_path(@tourney) %> |
-<%= link_to 'Back', tourneys_path %>
+  <p>
+    <strong>Venue:</strong>
+    <%# @tourney.venue %>
+  </p>
+
+  <p>
+    <strong>Game type:</strong>
+    <%= @tourney.game_type.name %>
+  </p>
+
+  <%= link_to 'Edit', edit_tourney_path(@tourney) %> |
+  <%= link_to 'Back', tourneys_path %>
+
+</div>
