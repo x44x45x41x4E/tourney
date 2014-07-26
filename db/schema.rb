@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140726133905) do
+ActiveRecord::Schema.define(version: 20140726134538) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -55,15 +55,11 @@ ActiveRecord::Schema.define(version: 20140726133905) do
   end
 
   create_table "rsvp_stats", force: true do |t|
-
     t.string   "rsvp_stat"
-    t.integer  "tourney_id"
-    t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
-
 
   add_index "rsvp_stats", ["user_id"], name: "index_rsvp_stats_on_user_id", using: :btree
 
@@ -94,6 +90,28 @@ ActiveRecord::Schema.define(version: 20140726133905) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  create_table "tourneys", force: true do |t|
+    t.string   "title"
+    t.text     "tourney_desc"
+    t.integer  "tourneytypes_id"
+    t.integer  "tourneycomments_id"
+    t.integer  "schedules_id"
+    t.integer  "venues_id"
+    t.integer  "users_id"
+    t.integer  "gametypes_id"
+    t.integer  "rsvp_stats_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "tourneys", ["gametypes_id"], name: "index_tourneys_on_gametypes_id", using: :btree
+  add_index "tourneys", ["rsvp_stats_id"], name: "index_tourneys_on_rsvp_stats_id", using: :btree
+  add_index "tourneys", ["schedules_id"], name: "index_tourneys_on_schedules_id", using: :btree
+  add_index "tourneys", ["tourneycomments_id"], name: "index_tourneys_on_tourneycomments_id", using: :btree
+  add_index "tourneys", ["tourneytypes_id"], name: "index_tourneys_on_tourneytypes_id", using: :btree
+  add_index "tourneys", ["users_id"], name: "index_tourneys_on_users_id", using: :btree
+  add_index "tourneys", ["venues_id"], name: "index_tourneys_on_venues_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
