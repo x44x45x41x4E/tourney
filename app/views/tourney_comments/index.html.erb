@@ -1,0 +1,23 @@
+<h1>Listing tourney_comments</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @tourney_comments.each do |tourney_comment| %>
+      <tr>
+        <td><%= link_to 'Show', tourney_comment %></td>
+        <td><%= link_to 'Edit', edit_tourney_comment_path(tourney_comment) %></td>
+        <td><%= link_to 'Destroy', tourney_comment, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Tourney comment', new_tourney_comment_path %>
