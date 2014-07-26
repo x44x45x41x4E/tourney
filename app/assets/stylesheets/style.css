@@ -6,3 +6,10 @@ body {
 div.hottest-tourney{
 	background-color: ;
 }
+
+.f-left{
+	float: left;
+}
+.f-right{
+	float: right;
+}
