@@ -1,5 +1,5 @@
-require 'spec_helper'
+require 'rails_helper'
 
-describe Board do
+RSpec.describe Board, :type => :model do
   pending "add some examples to (or delete) #{__FILE__}"
 end
