@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140726132422) do
+ActiveRecord::Schema.define(version: 20140726133905) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -24,12 +24,6 @@ ActiveRecord::Schema.define(version: 20140726132422) do
 
   create_table "cards", force: true do |t|
     t.string   "card_name"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  create_table "game_modes", force: true do |t|
-    t.string   "gamemode_name"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -94,6 +88,12 @@ ActiveRecord::Schema.define(version: 20140726132422) do
   end
 
   add_index "tourney_comments", ["user_id"], name: "index_tourney_comments_on_user_id", using: :btree
+
+  create_table "tourney_types", force: true do |t|
+    t.string   "tourney_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
