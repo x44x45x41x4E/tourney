@@ -46,3 +46,7 @@ div.row.comment{
 	background-color: red;
 	border-radius: 5px;	
 }
+
+ul > li > a:hover, ul > li > a:active {
+  color: #F6BB42 !important;
+}

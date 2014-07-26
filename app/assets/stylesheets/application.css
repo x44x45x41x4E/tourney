@@ -11,7 +11,7 @@
 body {
   margin: 0px;
   padding: 0px;
-  background-color: #404040;
+  background-color: #F5F7FA;
 }
 
 div.wrapper{
@@ -24,7 +24,7 @@ div.wrapper{
 }
 
 #hottest-tourney{
-	background-color: #BE1622;
+	background-color: #FFCE54;
 	color: #fff;
 }
 #hottest-tourney h1{
@@ -32,7 +32,7 @@ div.wrapper{
 }
 
 .tourn-list{
-	background: #F0F0F0;
+	background: #dfdfdf;
 	color: gray;
 }
 .tourn-list > div.col-sm-3{
@@ -63,4 +63,30 @@ div#comment_box{
 	border: 2px solid #BE1622;
 	width: 100px;
 	margin: 20px 0px;
+}
+.row {
+  text-align: center;
+}
+
+.col-1 {
+  margin: 3px;
+  height: 100px;
+  float: left;
+  background-color: #dfdfdf;
+}
+.col-2 {
+  margin: 3px;
+  height: 100px;
+  float: right;
+    background-color: #dfdfdf;
+}
+
+.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
+    color: #f39c12;
+    background-color: transparent;
+}
+
+.btn-default:hover {
+  color:#f39c12 !important;
+  background-color: #eee;
 }

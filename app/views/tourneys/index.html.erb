@@ -29,7 +29,7 @@
 <div class="wrapper">
   <div class="container">
     <br />
-     <%= link_to 'Organize a Tourney!', new_tourney_path, :class => "btn btn-success" %>
+     <%= link_to 'Organize a Tourney!', new_tourney_path, :class => "btn btn-default" %>
     <% @tourneys.each do |tourney| %>
         <%if tourney.tourney_type_id == 2%>
           <div class="row tourney-list-casuals">
