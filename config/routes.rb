@@ -1,6 +1,10 @@
 BaseApp::Application.routes.draw do
 
-  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks" }
+  root :to => "pages#index"
+
+  devise_for :users, :controllers => { :omniauth_callbacks => "users/omniauth_callbacks",
+  										:registrations => "registrations" }
+
 
   get "pages/index"
 
@@ -12,7 +16,7 @@ BaseApp::Application.routes.draw do
 
   end
 
-  root :to => "pages#index"
+
 
   match 'users/dashboard', :to => 'user#index', :via => [:get], :as => :my_dashboard
   match 'users/:id', :to => 'user#members_dashboard', :via => [:get], :as => :users_dashboard
