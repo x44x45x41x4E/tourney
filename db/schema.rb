@@ -11,7 +11,11 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
+<<<<<<< HEAD
 ActiveRecord::Schema.define(version: 20140726233000) do
+=======
+ActiveRecord::Schema.define(version: 20140726233552) do
+>>>>>>> Added references of RVSP to Tourney
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -129,12 +133,13 @@ ActiveRecord::Schema.define(version: 20140726233000) do
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "game_mode_id"
-    t.integer  "game_id"
+    t.integer  "rsvp_stats_id"
   end
 
   add_index "tourneys", ["game_id"], name: "index_tourneys_on_game_id", using: :btree
   add_index "tourneys", ["game_mode_id"], name: "index_tourneys_on_game_mode_id", using: :btree
   add_index "tourneys", ["game_type_id"], name: "index_tourneys_on_game_type_id", using: :btree
+  add_index "tourneys", ["rsvp_stats_id"], name: "index_tourneys_on_rsvp_stats_id", using: :btree
   add_index "tourneys", ["tourney_comment_id"], name: "index_tourneys_on_tourney_comment_id", using: :btree
   add_index "tourneys", ["tourney_comments_id"], name: "index_tourneys_on_tourney_comments_id", using: :btree
   add_index "tourneys", ["tourney_type_id"], name: "index_tourneys_on_tourney_type_id", using: :btree

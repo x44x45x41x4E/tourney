@@ -1,5 +1,5 @@
 <section class="highlight-view">
-  
+
   <div class="wrapper">
 
     <div class="row">
@@ -19,9 +19,9 @@
             <%= @tourney.title %>
           </h1>
 
-        
+
         <%= @tourney.desc %>
-        
+
 
         <p>
           <strong>Tourney type:</strong>
@@ -55,6 +55,11 @@
           <%= @tourney.game_type.name %>
         </p>
 
+        <p>
+          <strong>RSVP:</strong>
+          <%= @tourney.rsvp_stats.status%>
+        </p>
+
       </div>
     </div>
   </div>
@@ -65,7 +70,7 @@
 
   <div id="comment_box">
   </div>
-    <div id="comment_reply_box"> 
+    <div id="comment_reply_box">
 
       <div class="row comment">
         <div class="col-sm-2" style="margin-top: 0px;">
@@ -85,7 +90,7 @@
         <div class="col-sm-2" style="margin-top: 0px;">
           <%= image_tag('sample.png' ,:width=> '100px') %>
         </div>
-        
+
         <div class="col-sm-10">
           <h2>Meng David</h2>
           <p>
@@ -98,7 +103,7 @@
         <div class="col-sm-2" style="margin-top: 0px;">
           <%= image_tag('sample.png' ,:width=> '100px') %>
         </div>
-        
+
         <div class="col-sm-10">
           <h2>Meng David</h2>
           <p>
