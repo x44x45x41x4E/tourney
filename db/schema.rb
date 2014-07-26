@@ -28,6 +28,12 @@ ActiveRecord::Schema.define(version: 20140726134538) do
     t.datetime "updated_at"
   end
 
+  create_table "game_modes", force: true do |t|
+    t.string   "gamemode_name"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "game_types", force: true do |t|
     t.string   "game_type"
     t.integer  "board_id"
@@ -56,6 +62,8 @@ ActiveRecord::Schema.define(version: 20140726134538) do
 
   create_table "rsvp_stats", force: true do |t|
     t.string   "rsvp_stat"
+    t.integer  "tourney_id"
+    t.string   "name"
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
