@@ -1,17 +1,19 @@
 <div class="tourn-list row">
-	<div class="col-sm-3">
+	<div class="col-sm-12 pull-left">
 		<small>
 			<%= time_ago_in_words(newest_tourney_tournaments.created_at).gsub('about','') + ' ago' %>
 		</small>
 	</div>
-	<div class="col-sm-6">
+	<div class="col-sm-offset-2 col-sm-4" align="center">
 		<span>
 			<strong>
 				<%= newest_tourney_tournaments.title %>
 			</strong>
 		</span>
 	</div>
-	<div class="col-sm-3">
-		Los Angeles City
+	<div class="col-sm-12" align="right">
+		<small>
+			Los Angeles City
+		</small>
 	</div>
 </div>
