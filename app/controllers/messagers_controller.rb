@@ -23,6 +23,14 @@ class MessagersController < ApplicationController
   def create
     @messager = Messager.new(messager_params)
 
+    @message_type = Messager.message_type("SEND")
+    @mobile_number = Messager.User.find(id).contact
+    @sc = Messager.create { short("292908769")
+    @m_id = Messager.message_id("12345678123456781234567812345678")
+    @message = Messager.message
+    @c_id = Messager.client_id("20979ad86da809c5aec43d96d18d603b7f75248d7bf57ae67101c972f57c8e02")
+    @secret_key = Messager.secret_key("b08d0de99c40099bba90a1673eb6bb7557d078dd57f4be19616dfd3f8920e374")
+
     if @messager.save
       redirect_to @messager, notice: 'Messager was successfully created.'
     else
