@@ -62,7 +62,7 @@ GameMode.create([
 	])
 
 RsvpStats.create([
-		{ :status => 'Join' }
-		{ :status => 'Maybe' }
+		{ :status => 'Join' },
+		{ :status => 'Maybe' },
 		{ :status => 'Not Going' }
 	])
