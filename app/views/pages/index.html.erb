@@ -65,64 +65,14 @@
 
 <div class="wrapper">
 	<div class="container"> 
-	<div class="tourn-list row">
-				<div class="col-sm-2">
-						3 days ago
-					</div>
-					<div class="col-sm-7">
-						<span>
-							<%= image_tag('rails.png',:width=> "50px", :height=>"50px") %>
-						</span>
-						<span>
-							<strong>
-								Tapped Out Simpsons StoneCutter's Event
-							</strong>
-						</span>
-					</div>
-					<div class="col-sm-3">
-						Los Angeles City
-					</div>
-				</div>
-
-				<div class="tourn-list row">
-					<div class="col-sm-2">
-						3 days ago
-					</div>
-					<div class="col-sm-7">
-						<span>
-							<%= image_tag('rails.png',:width=> "50px", :height=>"50px") %>
-						</span>
-						<span>
-							<strong>
-								Tapped Out Simpsons StoneCutter's Event
-							</strong>
-						</span>
-					</div>
-					<div class="col-sm-3">
-						Los Angeles City
-					</div>
-				</div>
-
-				<div class="tourn-list row">
-					<div class="col-sm-2">
-						3 days ago
-					</div>
-					<div class="col-sm-7">
-						<span>
-							<%= image_tag('rails.png',:width=> "50px", :height=>"50px") %>
-						</span>
-						<span>
-							<strong>
-								Tapped Out Simpsons StoneCutter's Event
-							</strong>
-						</span>
-					</div>
-					<div class="col-sm-3">
-						Los Angeles City
-					</div>
-				</div>
-
+		<h1 align="center">newest shitts</h1>
+		<div class="row">
+			<div class="col-md-6">
+				<%= render partial: "newest_tourney_casuals", :collection => @newest_casuals %>
 			</div>
+			<div class="col-md-6">
+				<%= render partial: "newest_tourney_tournaments", :collection => @newest_tournaments %>
+			</div>
+		</div>
 	</div>
-
 </div>
