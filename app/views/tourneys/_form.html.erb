@@ -22,6 +22,7 @@
   <div class="field">
     <%= f.label :tourney_type_id %><br>
     <%= f.text_field :tourney_type_id %>
+        <%= f.hidden_field :user_id,:value=> current_user.id %>
   </div>
   <div class="field">
     <%= f.label :start_date %><br>

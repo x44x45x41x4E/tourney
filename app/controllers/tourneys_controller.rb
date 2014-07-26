@@ -24,7 +24,6 @@ class TourneysController < ApplicationController
     @tourney = Tourney.new(tourney_params)
 
     if @tourney.save
-      @tourney.user_id = current_user
       redirect_to @tourney, notice: 'Tourney was successfully created.'
     else
       render :new
