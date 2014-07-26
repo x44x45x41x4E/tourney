@@ -24,6 +24,7 @@ class TourneysController < ApplicationController
     @tourney = Tourney.new(tourney_params)
 
     if @tourney.save
+      @tourney.user_id = current_user
       redirect_to @tourney, notice: 'Tourney was successfully created.'
     else
       render :new
@@ -53,6 +54,6 @@ class TourneysController < ApplicationController
 
     # Only allow a trusted parameter "white list" through.
     def tourney_params
-      params.require(:tourney).permit(:title, :desc, :tourney_type_id, :tourney_comment_id, :tourney_comments_id, :start_date, :end_date, :user_id, :venue_id, :game_type_id)
+      params.require(:tourney).permit(:title, :desc, :tourney_type_id, :tourney_comments_id, :start_date, :end_date, :user_id, :venue_id, :game_type_id)
     end
 end

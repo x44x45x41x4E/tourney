@@ -7,7 +7,6 @@
             <th>Title</th>
             <th>Desc</th>
             <th>Tourney type</th>
-            <th>Tourney comment</th>
             <th>Tourney comments</th>
             <th>Start date</th>
             <th>End date</th>
@@ -24,12 +23,11 @@
               <td><%= tourney.title %></td>
               <td><%= tourney.desc %></td>
               <td><%= tourney.tourney_type %></td>
-              <td><%= tourney.tourney_comment %></td>
               <td><%= tourney.tourney_comments %></td>
               <td><%= tourney.start_date %></td>
               <td><%= tourney.end_date %></td>
               <td><%= tourney.user %></td>
-              <td><%= tourney.venue %></td>
+              <td><%# tourney.venue.name %></td>
               <td><%= tourney.game_type %></td>
               <td><%= link_to 'Show', tourney %></td>
               <td><%= link_to 'Edit', edit_tourney_path(tourney) %></td>
