@@ -53,3 +53,5 @@ end
 
 gem 'puma'
 gem 'yaml_db'
+
+gem 'gmaps4rails'
