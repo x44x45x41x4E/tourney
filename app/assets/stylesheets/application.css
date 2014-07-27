@@ -86,13 +86,24 @@ div#comment_box{
     background-color: #dfdfdf;
 }
 
-.navbar-nav > li > a:hover, .navbar-default .navbar-nav > li > a:focus {
-    color: #f39c12;
-    background-color: transparent;
+.navbar-nav > li > a:hover, {
+    color: #f39c12 !important;
+    background-color: transparent !important;
 }
 
+.navbar-nav > li > a:focus{
+    color: #f39c12 !important;
+    background-color: #e7e7e7 !important;
+}
 .btn-default:hover {
   color:#f39c12 !important;
   background-color: #eee;
 }
 
+#tourney_title.form-control {
+  border-radius: 5px;
+}
+
+#tourney_title.form-control: hover {
+  border-color: #F6BB42 !important;
+}

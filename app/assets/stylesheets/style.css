@@ -46,18 +46,17 @@ div.row.comment{
 	border-radius: 5px;	
 }
 
-ul > li > a:hover, ul > li > a:active {
+ul > li > a:hover {
   color: #F6BB42 !important;
+  background-color: #e7e7e7;
 }
-<<<<<<< Updated upstream
+
 .user_dashboard{
 	padding: 30px;
 	margin: 20px;
 }
 
-=======
-
-.tourn-list, h3, a {
+.tourn-list, h3, a, .btn-default{
   font-family: 'Montserrat', sans-serif;
 }
 
@@ -65,4 +64,8 @@ ul > li > a:hover, ul > li > a:active {
   font-family: 'Cutive Mono', serif; 
   text-transform: uppercase;
 }
->>>>>>> Stashed changes
+
+#tourney_tourney_type_id {
+  background-color: #fff;
+  color: #555;
+}
