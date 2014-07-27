@@ -68,8 +68,16 @@
         </p>
       </div>
       <div class="col-sm-5">
-
-      </div>>
+      <br>
+        <h3>Participants</h3>
+        <ul>
+          <% user_tourneys.each do |list| %>
+            <li align="left">
+              <%= list.user.first_name%> <%= list.user.last_name%> 
+            </li>
+          <% end %>
+        </ul>
+      </div>
     </div>
   </div>
 </section>
@@ -131,7 +139,6 @@
         var sType = uiTarget.attr('type');
 
         if(typeof(sType) !='undefined'){
-          alert('<%= params[:id] %>');
           $.ajax({
             type: 'POST',
             data: {
@@ -172,7 +179,7 @@
             'mobile_number' : '639265422258'
           },
           success : function(){
-            
+            window.location.reload()
           }
         });
       }
