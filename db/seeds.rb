@@ -29,9 +29,9 @@ Game.create([
 		{ :name => 'Dota', :game_type_id => '3'},
 		{ :name => 'LOL', :game_type_id => '3'},
 		{ :name => 'Age of Empires', :game_type_id => '3'},
-		{ :name => 'Basketball', :game_type_id => '3'},
-		{ :name => 'Ping-Pong', :game_type_id => '3'},
-		{ :name => 'Boxing', :game_type_id => '3'}
+		{ :name => 'Basketball', :game_type_id => '4'},
+		{ :name => 'Ping-Pong', :game_type_id => '4'},
+		{ :name => 'Boxing', :game_type_id => '4'}
 	])
 
 User.create([
