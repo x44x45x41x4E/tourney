@@ -64,7 +64,7 @@
   <div class="form-group">
     <%= f.label :game_id, :class => "col-sm-3 control-label" %>
     <div class="col-md-4">
-      <%= f.select :game_id, :class => "col-sm-3 control-label", Game.all.map{ |c| [c.name, "#{c.id}",{'game-type-id'=>c.game_type_id}] } %>
+      <%= f.select :game_id, Game.all.map{ |c| [c.name, "#{c.id}",{'game-type-id'=>c.game_type_id}] } %>
     </div>
   </div>
 
