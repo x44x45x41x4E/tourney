@@ -11,7 +11,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20140727000512) do
+ActiveRecord::Schema.define(version: 20140727014939) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
@@ -58,6 +58,16 @@ ActiveRecord::Schema.define(version: 20140727000512) do
 
   add_index "groups", ["tourney_id"], name: "index_groups_on_tourney_id", using: :btree
   add_index "groups", ["user_id"], name: "index_groups_on_user_id", using: :btree
+
+  create_table "join_tourneys", force: true do |t|
+    t.integer  "user_id"
+    t.integer  "Tourney_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  add_index "join_tourneys", ["Tourney_id"], name: "index_join_tourneys_on_Tourney_id", using: :btree
+  add_index "join_tourneys", ["user_id"], name: "index_join_tourneys_on_user_id", using: :btree
 
   create_table "messagers", force: true do |t|
     t.string   "message_type"

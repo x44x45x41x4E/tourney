@@ -24,4 +24,5 @@ BaseApp::Application.routes.draw do
   match 'users/dashboard', :to => 'user#index', :via => [:get], :as => :my_dashboard
   match 'users/:id', :to => 'user#members_dashboard', :via => [:get], :as => :users_dashboard
 
+  match '/tourneys/:id/rsvp', :to => 'tourneys#rsvp', :via => [:post], :as => :tourneys_rsvp
 end

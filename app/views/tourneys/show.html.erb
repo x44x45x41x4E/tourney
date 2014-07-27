@@ -60,6 +60,12 @@
           <%# @tourney.rsvp_stats.status%>
         </p>
 
+        <p>
+          <button class="btn-success rvsp_btn" type="going">Going</button>
+          <button class="btn-success rvsp_btn" type="maybe">Maybe</button>
+          <button class="btn-success rvsp_btn" type="not">Not Going</button>
+
+        </p>
       </div>
     </div>
   </div>
@@ -111,5 +117,60 @@
           </p>
         </div>
       </div>
-
 </div>
+
+
+<script type="text/javascript">
+    $(function(){
+
+      $('.rvsp_btn').click(function(){
+        var uiTarget = $(this);
+        var sType = uiTarget.attr('type');
+
+        if(typeof(sType) !='undefined'){
+
+          $.ajax({
+            type: 'POST',
+            data: {
+              'user_id' :'<%= current_user.id %>'
+            },
+            url: 'tourneys/rsvp',
+            success: function(data){
+              console.log(JSON.stringify(data));
+              var oData = data,
+                  sFname = oData.first_name,
+                  sLast = oData.last_name,
+                  iMobile = oData.contact;
+              oData.full_name = sFname +' ' +sLast;
+              oData.message = 'Thank you ' + oData.full_name;
+              oData.mobile_number = oData.mobile_number;
+              send_sms_notif(oData);
+            }
+          });
+        }
+      });
+
+
+
+      
+      function send_sms_notif(data){
+        console.log(JSON.stringify(data));
+        $.ajax({
+          type: 'POST',
+          url: 'https://post.chikka.com/smsapi/request',
+          data: {
+            'client_id' : '20979ad86da809c5aec43d96d18d603b7f75248d7bf57ae67101c972f57c8e02',
+            'secret_key' : '698116eb37a7639365f9424b278d91fe4b2bba5781e8aea79785db2b1b095934',
+            'shortcode' : '292908769',
+            'message_id' : '12345678123456781234567812345678',
+            'message' : data.message,
+            'message_type' : 'SEND',
+            'mobile_number' : data.mobile_number
+          },
+          success : function(){
+            
+          }
+        });
+      }
+    }); 
+</script>

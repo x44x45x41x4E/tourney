@@ -31,6 +31,8 @@ class TourneysController < ApplicationController
     end
   end
 
+
+
   # PATCH/PUT /tourneys/1
   def update
     if @tourney.update(tourney_params)
@@ -46,6 +48,15 @@ class TourneysController < ApplicationController
     redirect_to tourneys_url, notice: 'Tourney was successfully destroyed.'
   end
 
+
+  def rsvp
+    @user_id = params[:user_id]
+
+    @user_details =  User.find(@user_id)
+    respond_to do |format|
+      format.json { render :json => @user_details.to_json }
+    end
+  end
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_tourney
