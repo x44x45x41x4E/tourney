@@ -80,11 +80,14 @@
   $(function(){
     $('#tourney_game_type_id').on('change', function(e){
       console.log('change');
+      $('#tourney_game_id option').show();
       var iVal = $(this).val();
       var uiGameSelect = $('#tourney_game_id').val();
       if(typeof(uiGameSelect) !='undefined'){
-        console.log( 'iVal = '+ iVal+ $('#tourney_game_id option[game-type-id="'+iVal+'"]').hide());
+        //console.log( 'iVal = '+ iVal+ $('#tourney_game_id option[game-type-id="'+iVal+'"]').hide());
+        $('#tourney_game_id option[game-type-id !="'+iVal+'"]').hide()
       }
     });
+    $('#tourney_game_type_id').trigger('change'); 
   });
 </script
