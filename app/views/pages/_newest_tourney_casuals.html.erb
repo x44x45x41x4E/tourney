@@ -1,4 +1,12 @@
 <div class="tourn-listing-casuals row">
+<div class="col-sm-12 ">
+		<span>
+			<strong style="float: left;">
+				<%= link_to newest_tourney_casuals.title, tourneys_path(newest_tourney_casuals.id) %>
+			</strong>
+		</span>
+	</div>
+	<br />
 	<div class="col-sm-12 pull-right">
 		<small style="float: left;">
 			By: <a href="<%= users_dashboard_path(newest_tourney_casuals.user.id) %>">
@@ -12,13 +20,6 @@
 		<small>
 			<%= time_ago_in_words(newest_tourney_casuals.created_at).gsub('about','') + ' ago' %>
 		</small>
-	</div>
-	<div class="col-sm-12 ">
-		<span>
-			<strong>
-				<%= link_to newest_tourney_casuals.title, tourneys_path(newest_tourney_casuals.id) %>
-			</strong>
-		</span>
 	</div>
 	<div class="col-sm-12" align="right">
 		<br />
