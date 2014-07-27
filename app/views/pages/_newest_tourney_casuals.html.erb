@@ -1,4 +1,4 @@
-<div class="tourn-list row">
+<div class="tourn-listing row">
 	<div class="col-sm-12 pull-left">
 		<small>
 			<%= time_ago_in_words(newest_tourney_casuals.created_at).gsub('about','') + ' ago' %>
@@ -13,7 +13,7 @@
 	</div>
 	<div class="col-sm-12 pull-right">
 		<small>
-			Posted By: <a href="<%= users_dashboard_path(newest_tourney_casuals.user.id) %>"><%= newest_tourney_casuals.user.first_name%> <%= newest_tourney_casuals.user.last_name%></a>
+			By: <a href="<%= users_dashboard_path(newest_tourney_casuals.user.id) %>"><%= newest_tourney_casuals.user.first_name%> <%= newest_tourney_casuals.user.last_name%></a>
 		</small>
 		<br />
 		<small>

@@ -19,13 +19,17 @@ div.wrapper{
 	margin: 0 auto;
 }
 
+.time {
+  float: left;
+}
+
 .no-padding{
 	padding: 0px !important;
 }
 
 #hottest-tourney{
 	background-color: #FFCE54;
-	color: #fff;
+	color: #000;
 }
 #hottest-tourney h1{
 	text-align: center;
@@ -46,8 +50,20 @@ div.wrapper{
   height: 100px;
 }
 
-.tourn-list.row:hover {
+.tourn-list.row:hover{
   color: #F6BB42;
+}
+
+.person {
+  text-align: center;
+}
+.person:hover{
+  color: #F6BB42;
+}
+
+.tourn-listing {
+    background: #F5F7FA;
+    text-align: center;
 }
 
 .image {
@@ -60,7 +76,7 @@ div.tourn-list{
 }
 
 .highlight-view{
-	background-color: #BE1622;
+	background-color: #FFCE54;
 	color: #fff;
 }
 
@@ -73,17 +89,14 @@ div#comment_box{
   text-align: center;
 }
 
-.col-1 {
-  margin: 3px;
-  height: 100px;
-  float: left;
-  background-color: #dfdfdf;
+a {
+  color: #000;
 }
-.col-2 {
-  margin: 3px;
-  height: 100px;
-  float: right;
-    background-color: #dfdfdf;
+
+a:hover {
+  color: #F6BB42 !important;
+  text-decoration: normal;
+  background-color: #e7e7e7 !important;
 }
 
 .navbar-nav > li > a:hover, {
@@ -107,3 +120,4 @@ div#comment_box{
 #tourney_title.form-control: hover {
   border-color: #F6BB42 !important;
 }
+
