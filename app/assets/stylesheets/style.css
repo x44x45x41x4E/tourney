@@ -1,9 +1,8 @@
-body {
+@import url(http://fonts.googleapis.com/css?family=Montserrat);
+@import url(http://fonts.googleapis.com/css?family=Cutive+Mono);
+ body {
   margin: 0px;
   padding: 0px;
-}
-div.hottest-tourney{
-	background-color: ;
 }
 
 .f-left{
@@ -50,8 +49,20 @@ div.row.comment{
 ul > li > a:hover, ul > li > a:active {
   color: #F6BB42 !important;
 }
+<<<<<<< Updated upstream
 .user_dashboard{
 	padding: 30px;
 	margin: 20px;
 }
 
+=======
+
+.tourn-list, h3, a {
+  font-family: 'Montserrat', sans-serif;
+}
+
+.container > h1{
+  font-family: 'Cutive Mono', serif; 
+  text-transform: uppercase;
+}
+>>>>>>> Stashed changes
