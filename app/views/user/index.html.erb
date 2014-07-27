@@ -1,3 +1,18 @@
-Name: <%= @user.email%><br>
-My Games: sample games here<br>
-Tournaments Attended: Lorem ipsum bullshit<br> 
+<section id="hottest-tourney" class="no-padding">
+	<div class="wrapper">
+		<div class="container">
+			<div class="col-md-2 user_dashboard">
+          			<%= image_tag('SMMGrandFinalLogo.png' , :width => "150px") %>
+        		</div>
+			<div class= "col-md-4 user_dashboard ">
+			<h2><b><%= @user.first_name %> <%= @user.last_name %></b></h2><br>
+				<%= @user.address %><br>
+				<%= @user.contact %>
+			</div>
+			<div class= "col-md-4 user_dashboard ">
+				<br>
+				<button class="btn success">Invite me!</button>
+			</div>
+		</div>
+	</div>
+</section>

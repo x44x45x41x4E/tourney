@@ -50,3 +50,8 @@ div.row.comment{
 ul > li > a:hover, ul > li > a:active {
   color: #F6BB42 !important;
 }
+.user_dashboard{
+	padding: 30px;
+	margin: 20px;
+}
+
