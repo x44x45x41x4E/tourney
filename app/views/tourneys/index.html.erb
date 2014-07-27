@@ -2,27 +2,37 @@
   <div class="wrapper">
     <div class="container">
     <h1>Featured Tourneys</h1>
-      <% @tourneys.each do |tourney| %>
-        <%if tourney.tourney_type_id == 2%>
-          <div class="row tourney-list-casuals">
-        <%elsif tourney.tourney_type_id == 1%>
-          <div class="row tourney-list-tournaments">
-        <%end%>
-          <div class="row">
+      <div class="row tourney-list-tournaments">
+        <div class="row">
             <div class="col-md-3">
-                by: <a href="<%= users_dashboard_path(tourney.user.id)%>"><%= tourney.user.first_name %> <%= tourney.user.last_name %></a><br/>
-                <%= time_ago_in_words(tourney.start_date).gsub('about','') + ' ago' %>
+                by: Dwyane Wade<br/>
+                3 months ago
             </div>
             <div class="col-md-6">
-              <h4><b><%= link_to tourney.title, tourney_path(tourney.id) %></b></h4>
+              <h4><b>Friday Night Magic</b></h4>
             </div>
             <div class="col-md-3" align='left'>
-              <%= tourney.tourney_type.tourney_name%><br>
+              Tournament<br />
               Location Here
             </div>
           </div>
         </div>
-      <%end%>
+      <div class="row tourney-list-casuals">
+        <div class="row">
+            <div class="col-md-3">
+                by: Bogart Porto<br/>
+                3 months ago
+            </div>
+            <div class="col-md-6">
+              <h4><b>1v1 basketball</b></h4>
+            </div>
+            <div class="col-md-3" align='left'>
+              Casuals<br />
+              Location Here
+            </div>
+          </div>
+        </div>
+      </div>
     </div>
   </div>
 </section>
