@@ -51,7 +51,10 @@ class TourneysController < ApplicationController
 
   def rsvp
     @user_id = params[:user_id]
-
+    JoinTourney.create([
+          {:user_id => current_user.id, 
+            :tourney_id => params[:tourney_id] },
+            ])
     @user_details =  User.find(@user_id)
     respond_to do |format|
       format.json { render :json => @user_details.to_json }
