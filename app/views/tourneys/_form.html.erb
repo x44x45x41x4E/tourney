@@ -77,7 +77,14 @@
 <% end %>
 
 <script type="text/javascript">
-$(function(){
-  
-});
+  $(function(){
+    $('#tourney_game_type_id').on('change', function(e){
+      console.log('change');
+      var iVal = $(this).val();
+      var uiGameSelect = $('#tourney_game_id').val();
+      if(typeof(uiGameSelect) !='undefined'){
+        console.log( 'iVal = '+ iVal+ $('#tourney_game_id option[game-type-id="'+iVal+'"]').hide());
+      }
+    });
+  });
 </script

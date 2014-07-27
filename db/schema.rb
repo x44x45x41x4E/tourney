@@ -133,15 +133,7 @@ ActiveRecord::Schema.define(version: 20140726233552) do
     t.integer  "rsvp_stats_id"
   end
 
-  add_index "tourneys", ["game_id"], name: "index_tourneys_on_game_id", using: :btree
-  add_index "tourneys", ["game_mode_id"], name: "index_tourneys_on_game_mode_id", using: :btree
-  add_index "tourneys", ["game_type_id"], name: "index_tourneys_on_game_type_id", using: :btree
   add_index "tourneys", ["rsvp_stats_id"], name: "index_tourneys_on_rsvp_stats_id", using: :btree
-  add_index "tourneys", ["tourney_comment_id"], name: "index_tourneys_on_tourney_comment_id", using: :btree
-  add_index "tourneys", ["tourney_comments_id"], name: "index_tourneys_on_tourney_comments_id", using: :btree
-  add_index "tourneys", ["tourney_type_id"], name: "index_tourneys_on_tourney_type_id", using: :btree
-  add_index "tourneys", ["user_id"], name: "index_tourneys_on_user_id", using: :btree
-  add_index "tourneys", ["venue_id"], name: "index_tourneys_on_venue_id", using: :btree
 
   create_table "users", force: true do |t|
     t.string   "email",                  default: "", null: false
