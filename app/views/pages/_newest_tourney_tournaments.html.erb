@@ -1,16 +1,16 @@
-<div class="tourn-listing row">
+<div class="tourn-listing-tournaments row">
 	<div class="col-md-4">
 		<small style="float: left;">
 			By: <a class="person" href="<%= users_dashboard_path(newest_tourney_tournaments.user.id) %>"><%= newest_tourney_tournaments.user.first_name%> <%= newest_tourney_tournaments.user.last_name%></a>
 		</small>
 	</div>
-	<br>
+	<br />
 	<div class="col-md-3 pull-left">
 		<small style="margin-left: -325px;">
 			<%= time_ago_in_words(newest_tourney_tournaments.created_at).gsub('about','') + ' ago' %>
 		</small>
 	</div>
-	<div class="col-sm-offset-2 col-sm-4 pull-left">
+	<div class="col-sm-12">
 		<span>
 			<strong>
 				<%= link_to newest_tourney_tournaments.title, tourney_path(newest_tourney_tournaments.id) %>
