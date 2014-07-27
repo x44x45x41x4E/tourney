@@ -58,7 +58,13 @@
   <div class="form-group">
     <%= f.label :game_type_id, :class => "col-sm-3 control-label" %>
     <div class="col-md-4">
-      <%= f.collection_select :game_type_id, GameType.all, :id, :name, {:include_blank => false} %>
+      <%= f.select :game_type_id, GameType.all.map{ |c| [c.name, "#{c.id}"] } %>
+    </div>
+  </div>
+  <div class="form-group">
+    <%= f.label :game_id, :class => "col-sm-3 control-label" %>
+    <div class="col-md-4">
+      <%= f.select :game_id, Game.all.map{ |c| [c.name, "#{c.id}",{'game-type-id'=>c.game_type_id}] } %>
     </div>
   </div>
 
@@ -68,3 +74,18 @@
     </div>
   </div>
 <% end %>
+
+<script type="text/javascript">
+  $(function(){
+    $('#tourney_game_type_id').on('change', function(e){
+      console.log('change');
+      $('#tourney_game_id option').show();
+      var iVal = $(this).val();
+      var uiGameSelect = $('#tourney_game_id').val();
+      if(typeof(uiGameSelect) !='undefined'){
+        $('#tourney_game_id option[game-type-id !="'+iVal+'"]').hide()
+      }
+    });
+    $('#tourney_game_type_id').trigger('change'); 
+  });
+</script
